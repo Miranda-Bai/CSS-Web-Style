@@ -1,0 +1,52 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.heart {
+  width: 200px;
+  height: 200px;
+  background: red;
+  position: relative;
+  transform: rotate(45deg) scale(0.5);
+  animation: heartbit 1s alternate infinite;
+  box-shadow: 10px 10px 20px -4px rgba(184, 4, 4, 0.3);
+}
+.heart::before {
+  content: '';
+  width: 200px;
+  height: 100px;
+  background: red;
+  position: absolute;
+  left: 0;
+  top: -100px;
+  border-radius: 100px 100px 0 0;
+  
+}
+.heart::after {
+  content: '';
+  width: 100px;
+  height: 200px;
+  background: red;
+  position: absolute;
+  left: -100px;
+  top: 0;
+  border-radius: 100px 0 0 100px;
+}
+/*
+ 使用默认的ease动画速度：即animation-timing-function: ease;
+轮流反向播放动画：即animation-direction: alternate;，否则心脏只能从小变大，而从大变小变成了瞬时，不美观。
+动画状态使用transform: rotate(45deg) scale(xxx)
+ */
+@keyframes heartbit {
+  0% {
+      transform: rotate(45deg) scale(0.5);
+  }
+  100% {
+      transform: rotate(45deg) scale(1);
+  }
+}
+
