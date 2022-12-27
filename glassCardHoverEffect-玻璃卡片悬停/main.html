@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glass Hover</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="content">
+          <h2>01</h2>
+          <h3>Card One</h3>
+          <p>Realistic glass Card Hover effect</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2>02</h2>
+          <h3>Card Two</h3>
+          <p>Realistic glass Card Hover effect</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2>03</h2>
+          <h3>Card Three</h3>
+          <p>
+            Realistic glass Card Hover effect.Realistic glass Card Hover
+            effect.Realistic glass Card Hover effect.Realistic glass Card Hover
+            effect.Realistic glass Card Hover effect.Realistic glass Card Hover
+            effect.Realistic glass Card Hover effect
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    <!-- 要让玻璃效果更加逼真，需要用到一个JS库：vanilla-tilt.js
+         是一个平滑的3D倾斜JS库  -->
+    <script src="vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 15, //最大倾斜度数
+        speed: 400, //倾斜转换的速度
+        glare: true, // 是否开启眩光效果
+        "max-glare": 1, //最大眩光的不透明度
+      });
+    </script>
+  </body>
+</html>
