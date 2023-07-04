@@ -1,0 +1,84 @@
+html,
+body,
+.root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: aqua;
+}
+.nav {
+  width: 100%;
+  height: 7rem;
+  position: fixed;
+  top: 0;
+  z-index: 30;
+  background: grey;
+  transition: all 0.5s;
+}
+.header1,
+.hearder2 {
+  width: 100%;
+  height: 3.5rem;
+}
+
+.one {
+  /* background: red; */
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .hearder2 {
+  background: purple;
+} */
+h3 {
+  display: inline-block;
+}
+.one-left,
+.one-right {
+  padding: 0 20px;
+}
+.one-left,
+.one-right-second {
+  font-size: large;
+  font-weight: 800;
+}
+.one-right {
+  /* height: 100%; */
+  /* background: white; */
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.one-right-first {
+  flex-grow: 1;
+}
+.nav-content {
+  /* background: blue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-left: 80px;
+}
+.one-right-second {
+  padding: 0 20px;
+}
+.hearder2 {
+  transition: 0.5s;
+}
+.hidden-header1 {
+  transform: translateY(-3.5rem);
+}
+.fixed-header2 {
+  opacity: 0.5;
+}
+
+.body{
+    margin-top: 7rem;
+    height: 100%;
+}

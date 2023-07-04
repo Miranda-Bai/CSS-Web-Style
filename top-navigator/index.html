@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Navigator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="root">
+      <div class="nav">
+        <div class="header1">
+          <div class="one">
+            <div class="one-left">logo pic logo pic</div>
+            <div class="one-right">
+              <div class="one-right-first">
+                <div class="nav-content">
+                  <h3>Dashboard</h3>
+                  <h3>Movie</h3>
+                  <h3>TV series</h3>
+                  <h3>Show</h3>
+                  <h3>Animation</h3>
+                  <h3>Night</h3>
+                </div>
+              </div>
+            </div>
+            <div class="one-right-second">several icons</div>
+          </div>
+        </div>
+        <div class="hearder2">search bar</div>
+      </div>
+      <div class="body">
+        <p>1body part, fill content up.</p>
+        <p>2body part, fill content up.</p>
+        <p>3body part, fill content up.</p>
+        <p>4body part, fill content up.</p>
+        <p>5body part, fill content up.</p>
+        <p>6body part, fill content up.</p>
+        <p>7body part, fill content up.</p>
+        <img src="./Christmas3.png" alt="" />
+      </div>
+    </div>
+  </body>
+  <script>
+    let searchBar = document.querySelector(".hearder2");
+    let header1 = document.querySelector(".header1");
+    let navbar = document.querySelector(".nav")
+    let isNotTop = 0;
+    window.addEventListener("scroll", () => {
+      isNotTop = window.scrollY;
+
+      console.log("isNotTop: ", isNotTop);
+
+      console.log(
+        "header1.style: ",
+        parseInt(getComputedStyle(header1).height, 10)
+      );
+
+      if (isNotTop >= parseInt(getComputedStyle(header1).height, 10)) {
+        navbar.classList.add("hidden-header1");
+        // console.log("hearder1: ", header1);
+        searchBar.classList.add("fixed-header2");
+        // console.log("searchBar: ", searchBar);
+      } else {
+        navbar.classList.remove("hidden-header1");
+        searchBar.classList.remove("fixed-header2");
+      }
+    });
+  </script>
+</html>
